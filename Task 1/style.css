@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    background: linear-gradient(135deg, #f3f5fc, #e9f6f3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .calculator-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calculator-title {
+  font-size: 2rem;
+  color: #a97acf;
+  margin-bottom: 10px;
+}
+
+
+  .calculator {
+    background-color: #ffffff;
+    width: 340px;
+    border-radius: 24px;
+    box-shadow: 8px 8px 0px #c3d5d0;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .calculator:hover {
+    transform: scale(1.02);
+  }
+
+  .display {
+    background-color: #fafafa;
+    padding: 20px;
+    text-align: right;
+    border-bottom: 2px solid #d9e7e4;
+  }
+
+  .expression {
+    font-size: 1rem;
+    color: #8d8d8d;
+    min-height: 20px;
+  }
+
+  .result {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #3a3a3a;
+    min-height: 40px;
+  }
+
+  .buttons {
+    background-color: #d0f0e8;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+  }
+
+  button {
+    background-color: #ffffff;
+    border: 2px solid #c8ebe2;
+    border-radius: 14px;
+    height: 65px;
+    width: 100%;
+    font-size: 1.1rem;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px #a6d2c8;
+    transition: all 0.15s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button:hover {
+    background-color: #e9f6f3;
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0px #9ccfc3;
+  }
+
+  button:active {
+    transform: translateY(3px);
+    box-shadow: 1px 1px 0px #a6d2c8;
+  }
+
+  .operator {
+    background-color: #f4e3f9;
+    border-color: #f4e3f9;
+    box-shadow: 3px 3px 0px #d3b6e0;
+  }
+
+  .operator:hover {
+    background-color: #edd4f4;
+  }
+
+  .clear {
+    background-color: #fde2e2;
+    border-color: #fde2e2;
+    box-shadow: 3px 3px 0px #e4b8b8;
+  }
+
+  .clear:hover {
+    background-color: #fbc8c8;
+  }
+
+  .equal {
+    grid-column: span 2;
+    background-color: #b8e2f2;
+    border-color: #b8e2f2;
+    box-shadow: 3px 3px 0px #94c7da;
+  }
+
+  .equal:hover {
+    background-color: #9ed3eb;
+  }
+
+  /* Responsive design */
+  @media (max-width: 400px) {
+    .calculator {
+      width: 90%;
+      box-shadow: 4px 4px 0px #c3d5d0;
+    }
+
+    button {
+      height: 55px;
+      font-size: 1rem;
+    }
+
+    .result {
+      font-size: 1.8rem;
+    }
+  }
